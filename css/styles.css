@@ -30,8 +30,8 @@ body {
 
     /* рамку виділення взяв у коментар, головне самому про це не забути */
 
-/* outline: 1px solid tomato;
-    outline-offset: 2px; */
+outline: 1px solid tomato;
+    outline-offset: 2px;
 
 }
 h1,
@@ -68,6 +68,11 @@ img {
 }
 .header-list {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-list .link-mail {
+    align-items: center;
 }
 .header-item {
     margin-right: 50px;
@@ -120,6 +125,13 @@ img {
 .link-tel,.link-mail {
     color: var(--secondary-text-color);
 }
+.link-mail:hover .contact-icon {
+    fill: var(--acent-color);
+}
+.link-tel:hover .contact-icon {
+    fill: var(--acent-color);
+}
+
 .nav-link:hover,
 .nav-link:focus,
 .link-mail:hover,
@@ -146,8 +158,8 @@ margin-left: auto;
 background-image: linear-gradient(
     to right,
 rgba(47, 48, 58, 0.4),
-rgba(47, 48, 58, 0.4)
-), url(../images/mainfon.jpg);
+rgba(47, 48, 58, 0.4)), 
+url(../images/mainfon.jpg);
 
 background-repeat: no-repeat;
 background-position: center;
@@ -184,6 +196,13 @@ background-size: cover;
     cursor: pointer;
     background-color: var(--acent-color);
 }
+.contact-icon {
+    gap: 10px;
+    fill: var(--secondary-text-color);
+}
+.link-mail:focus .contact-icon {
+    fill: var(--acent-color);
+}
 /* Секція переваг */
 
 .advantage-section {
@@ -212,6 +231,24 @@ background-size: cover;
 }
 .text-title:last-child {
     margin-right: 0;
+}
+
+.adv-list {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.adv-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+}
+.adv-icon {
+    fill: var(--main-text-color);
 }
 /* Секція команди */
 .team-section {
@@ -261,7 +298,57 @@ background-size: cover;
     color: var(--secondary-text-color);
     margin-bottom: 16px;
 }
+/* CLIENTS */
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.clients-title {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+
+    margin-bottom: 50px;
+}
+.clients-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.clietns-link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    color: #AFB1B8;
+    border: 1px solid #afb1b8;
+    border-radius: 4px; 
+}
+.clients-icon {
+    fill: #AFB1B8;
+}
+.clietns-link:hover,
+.clietns-link:focus {
+    border: 1px solid var(--acent-color);
+}
+.clietns-link:hover .clients-icon {
+    fill: var(--acent-color)
+}
+.clietns-link:focus .clients-icon {
+    fill: var(--acent-color)
+}
+
 /* footer */
+.footer-container {
+    display: flex;
+    align-items: baseline;
+}
 .footer {
 padding-top: 60px;
 padding-bottom: 60px;
@@ -302,6 +389,51 @@ background-color: var(--hero-and-footer-background-color);
 .footer-tel:focus {
     color: var(--acent-color);
 }
+.joinus {
+    display: flex;
+    margin-left: 70px;
+}
+.footer-title {
+display: inline-block;
+
+font-family: 'Roboto';
+font-weight: 700;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+    
+color: #FFFFFF;
+
+margin-bottom: 20px;
+margin-left: 70px;
+}
+.socials-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 70px
+}
+.socials-link-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 10%);
+    border-radius: 50%;
+
+    outline: 1px solid rgba(255, 255, 255, 10%);
+}
+.footer-icon {
+    fill: #FFFFFF;
+}
+
+.socials-link-footer:hover,
+.socials-link-footer:focus {
+    background-color: #2196F3;
+}
+
 
 /* Portfolio */
 .title-portfolio {
