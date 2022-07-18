@@ -69,9 +69,6 @@ img {
     align-items: center;
     justify-content: center;
 }
-.header-list .link-mail {
-    align-items: center;
-}
 .header-item {
     margin-right: 50px;
 }
@@ -121,6 +118,9 @@ img {
     color: var(--acent-color);
 }
 .link-tel,.link-mail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: var(--secondary-text-color);
 }
 .link-mail:hover .contact-icon {
@@ -195,8 +195,7 @@ background-size: cover;
     background-color: var(--acent-color);
 }
 .contact-icon {
-    gap: 10px;
-    fill: var(--secondary-text-color);
+       fill: var(--secondary-text-color);
 }
 .link-mail:focus .contact-icon {
     fill: var(--acent-color);
@@ -219,6 +218,16 @@ background-size: cover;
 
     margin-bottom: 10px;
 }
+.advantage-wrap {
+    width: 270px;
+    height: 120px;   
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .advantage-item {
     width: 270px;
 }
@@ -230,22 +239,7 @@ background-size: cover;
 .text-title:last-child {
     margin-right: 0;
 }
-
-.adv-list {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 30px;
-}
-.adv-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 270px;
-    height: 120px;
-    background-color: #F5F4FA;
-    border-radius: 4px;
-}
-.adv-icon {
+.advantage-icon {
     fill: var(--main-text-color);
 }
 /* Секція команди */
@@ -390,15 +384,13 @@ background-color: var(--hero-and-footer-background-color);
 .footer-tel:focus {
     color: var(--acent-color);
 }
-.joinus {
-    display: flex;
+.join-us {
     margin-left: 70px;
 }
 .footer-title {
 display: inline-block;
 
-font-family: 'Roboto';
-font-weight: 700;
+font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.03em;
 text-transform: uppercase;
@@ -406,14 +398,12 @@ text-transform: uppercase;
 color: #FFFFFF;
 
 margin-bottom: 20px;
-margin-left: 70px;
 }
 .socials-footer {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-left: 70px
 }
 .socials-link-footer {
     display: flex;
@@ -500,7 +490,9 @@ margin-left: 70px;
 }
 .exampel-item:hover,
 .exampel-item:focus {
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* socials icon  */
